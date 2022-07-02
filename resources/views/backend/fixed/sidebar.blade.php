@@ -11,7 +11,8 @@
 
                 <a class="nav-link" href="{{route('book.list')}}">Books</a>
                 <a class="nav-link" href="{{route('category.list')}}">Categories</a>
-
+                <a class="nav-link" href="{{route('reader.list')}}">Readers</a>
+                
             </div>
         </div>
         <div class="sb-sidenav-footer">

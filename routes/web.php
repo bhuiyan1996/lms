@@ -4,6 +4,8 @@ use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Backend\BookController;
 use App\Http\Controllers\Backend\CategoryController;
+use App\Http\Controllers\Backend\ReaderController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,3 +39,10 @@ Route::post('/category/store',[CategoryController::class,'store'])->name('catego
 Route::get('/books',[BookController::class,'list'])->name('book.list');
 Route::get('/book/form',[BookController::class,'form'])->name('form.book');
 Route::post('/book/store',[BookController::class,'store'])->name('store.book');
+
+//  reader operation
+Route::get('/readers',[ReaderController::class,'list'])->name('reader.list');
+Route::get('/reader/form',[ReaderController::class,'form'])->name('form.reader');
+Route::post('/reader/store',[ReaderController::class,'store'])->name('store.reader');
+
+

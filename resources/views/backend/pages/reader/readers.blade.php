@@ -26,8 +26,8 @@
       <td scope="col">{{$key+1}}</th>
       <td scope="col">{{$data->name}}</th>
       <td scope="col">{{$data->id}}</th>
-      <td scope="col">{{$data->phone}}</th>
       <td scope="col">{{$data->email}}</th>
+      <td scope="col">{{$data->phone}}</th>
       <td scope="col">{{$data->address}}</th>
       <td scope="col">{{$data->gender}}</th>
     </tr>

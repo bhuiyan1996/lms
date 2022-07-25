@@ -2,7 +2,7 @@
 
 @section('backend_content')
 <h1> Book List</h1>
-{{-- @dd($book); --}}
+
 <a href="{{route('form.book')}}" class="btn btn-primary">Create book</a>
 
 <table class="table">
@@ -13,6 +13,7 @@
             <th scope="col">Category</th>
             <th scope="col">Price</th>
             <th scope="col">Qty</th>
+            <th scope="col">Total Book</th>
             <th scope="col">Action</th>
 
         </tr>
@@ -20,17 +21,21 @@
     <tbody>
 @foreach($books as $data)
         <tr>
-            <td scope="col">1</td>
+            <td scope="col">{{$data->id}}</td>
             <td scope="col">{{$data->name}}</td>
             <td scope="col">{{$data->category_id}}</td>
             <td scope="col">{{$data->price}}</td>
             <td scope="col">{{$data->quantity}}</td>
-            <td scope="col">
-                <a href="">View</a>
+            <td scope="col">1</td>
+            <td>
+                <a class="btn btn-primary" href="{{route('delete.book', $data->id)}}">Delete</a>
+                <a class="btn btn-success" href="{{route('view.book', $data->id)}}">View</a>
+                <!-- <a  class="btn btn-danger" href="">Delete</a> -->
             </td>
 
         </tr>
         @endforeach
     </tbody>
 </table>
+{{$books->links()}}
 @endsection

@@ -37,4 +37,19 @@ class BookController extends Controller
         ]);
         return redirect()->route('book.list');
     }
+    public function views($id) { 
+
+       $book= Book::find($id);
+
+       return view ('backend.pages.book.show',compact('book'));
+
+    }
+
+public function delete($id){
+
+        $book= Book::find($id)->delete();
+
+        return redirect()->back();
+}
+
 }

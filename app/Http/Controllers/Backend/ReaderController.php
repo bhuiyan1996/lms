@@ -27,7 +27,7 @@ class ReaderController extends Controller
         Reader::create([
             // migration table -column name => input field name
             'name'=>$request->reader_name,
-            'id'=>$request->reader_id,
+            'refid'=>$request->reader_id,
             'phone'=>$request->reader_phn,
             'email'=>$request->reader_email,
             'address'=>$request->reader_address,

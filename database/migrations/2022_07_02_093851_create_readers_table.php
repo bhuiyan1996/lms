@@ -14,8 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::create('readers', function (Blueprint $table) {
+            $table->id()->startingValue(1000);
             $table->string('name');
-            $table->integer('id');
+            $table->integer('refid');
             $table->string('email');
             $table->integer('phone');
             $table->text('address');

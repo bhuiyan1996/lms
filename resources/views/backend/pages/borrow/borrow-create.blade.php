@@ -7,7 +7,7 @@
     @csrf
     <div class="form-group">
         <label for="formGroupExampleInput">Reader Id: </label>
-        <input name="reader" type="number" class="form-control" id="formGroupExampleInput" placeholder="Enter Reader Id">
+        <input name="reader_id" type="number" class="form-control" id="formGroupExampleInput" placeholder="Enter Reader Id">
     </div>
 
     <div class="form-group">

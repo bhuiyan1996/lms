@@ -27,7 +27,7 @@ class ReaderController extends Controller
         Reader::create([
             // migration table -column name => input field name
             'name'=>$request->reader_name,
-            'refid'=>$request->reader_id,
+            'id'=>$request->reader_id,
             'phone'=>$request->reader_phn,
             'email'=>$request->reader_email,
             'address'=>$request->reader_address,
@@ -35,10 +35,23 @@ class ReaderController extends Controller
         ]);
         return redirect()->route('reader.list');
     }
+    public function views($id) { 
+
+        $reader= Reader::find($id);
+ 
+        return view ('backend.pages.reader.show',compact('reader'));
+ 
+     }
+     public function delete($id){
+
+             $reader =  Reader::find($id)->delete();
+            return redirect()->back();
+        }
+
+     }
 
 
-
-    }
+    
 
 
 

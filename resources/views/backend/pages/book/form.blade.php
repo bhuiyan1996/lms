@@ -14,7 +14,7 @@
             <input type="text" class="form-control" name="book_desc">
 
             <select class="form-select" aria-label="Default select example" name="category">
-                <option selected>Open this select menu</option>
+                <option selected>Select Category</option>
                 @foreach($categories as $data)
                 <option value="{{$data->id}}">{{$data->name}}</option>
                 @endforeach

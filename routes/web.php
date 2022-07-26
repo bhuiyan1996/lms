@@ -51,14 +51,15 @@ Route::get('/book/delete/{id}',[BookController::class,'delete'])->name('delete.b
 
 
 
-
-
 //  reader operation
 Route::get('/readers',[ReaderController::class,'list'])->name('reader.list');
 Route::get('/reader/form',[ReaderController::class,'form'])->name('form.reader');
 Route::post('/reader/store',[ReaderController::class,'store'])->name('store.reader');
+Route::get('/reader/view/{id}',[ReaderController::class,'views'])->name('view.reader');
+Route::get('/reader/delete/{id}',[ReaderController::class,'delete'])->name('delete.reader');
 
-//  reader operation
+
+//  borrow operation
 Route::get('/borrow',[BorrowController::class,'list'])->name('borrow.list');
 Route::get('/borrow/form',[BorrowController::class,'form'])->name('form.borrow');
 Route::post('/borrow/store',[BorrowController::class,'store'])->name('store.borrow');

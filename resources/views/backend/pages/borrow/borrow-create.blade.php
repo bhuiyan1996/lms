@@ -7,7 +7,13 @@
     @csrf
     <div class="form-group">
         <label for="formGroupExampleInput">Reader Id: </label>
-        <input name="reader_id" type="number" class="form-control" id="formGroupExampleInput" placeholder="Enter Reader Id">
+        <select class="form-select" aria-label="Default select example" id="bookname" name="book">
+                <option selected>Select Reader Id</option>
+                @foreach($readers as $reader)
+                <option value="{{$reader->id}}">{{$reader->id}}</option>
+                @endforeach
+            </select>
+        <!-- <input name="reader_id" type="number" class="form-control" id="formGroupExampleInput" placeholder="Enter Reader Id"> -->
     </div>
 
     <div class="form-group">

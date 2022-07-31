@@ -52,4 +52,28 @@ public function delete($id){
         return redirect()->back();
 }
 
+public function edit($id) { 
+
+    $book= Book::find($id);
+ 
+    return view ('backend.pages.book.edit',compact('book'));
+
+ }
+
+ public function update(Request $request,$id)
+ {
+        $book=Book::find($id);
+        $book->update([
+            'price'=>$request->book_price,
+            'quantity'=>$request->book_qty,
+            'description'=>$request->book_desc,
+        ]);
+
+        return redirect()->route('backend.pages.books');
+ }
+
+
+
+
+
 }

@@ -18,6 +18,6 @@ class Borrow extends Model
 
     public function getreader()
     {
-        return $this->belongsTo(Reader::class, 'reader_name', 'id');
+        return $this->belongsTo(Reader::class, 'name', 'id');
     }
 }

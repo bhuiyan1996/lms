@@ -28,9 +28,9 @@
             <td scope="col">{{$data->quantity}}</td>
             <td scope="col">1</td>
             <td>
-                <a class="btn btn-primary" href="{{route('delete.book', $data->id)}}">Delete</a>
+                <!-- <a class="btn btn-primary" href="{{route('delete.book', $data->id)}}">Delete</a> -->
                 <a class="btn btn-success" href="{{route('view.book', $data->id)}}">View</a>
-                <!-- <a  class="btn btn-danger" href="">Delete</a> -->
+                <a  class="btn btn-danger" href="{{route('book.edit', $data->id)}}">Edit</a>
             </td>
 
         </tr>

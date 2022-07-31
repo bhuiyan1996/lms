@@ -6,6 +6,7 @@ use App\Http\Controllers\Backend\BookController;
 use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ReaderController;
 use App\Http\Controllers\Backend\BorrowController;
+use App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,10 +27,18 @@ use App\Http\Controllers\Backend\BorrowController;
 //     return view('about');
 // });
 
-Route::get('/',[DashboardController::class,'index'])->name('dashboard');
+
+
+
+Route::get('/', [LoginController::class, 'login'])->name('login');
+Route::post('/login-check', [LoginController::class, 'loginCheck'])->name('loginCheck');
+Route::get('/registration', [LoginController::class, 'registration'])->name('registration');
+Route::post('/do-registration', [LoginController::class, 'doRegistration'])->name('doRegistration');
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
+
+
 Route::get('/dashboard',[DashboardController::class,'viewDashboard'])->name('dashboard');
 Route::get('/about',[AboutUsController::class,'index'])->name('about');
-
 
 Route::get('/categories',[CategoryController::class,'list'])->name('category.list');
 Route::get('/category/create',[CategoryController::class,'create'])->name('category.create');

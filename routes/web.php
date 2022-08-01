@@ -56,7 +56,7 @@ Route::post('/book/store',[BookController::class,'store'])->name('store.book');
 Route::get('/book/view/{id}',[BookController::class,'views'])->name('view.book');
 Route::get('/book/delete/{id}',[BookController::class,'delete'])->name('delete.book');
 Route::get('/book/edit/{id}',[BookController::class,'edit'])->name('book.edit');
-Route::get('/book/update/{id}',[BookController::class,'update'])->name('book.update');
+Route::post('/book/update/{id}',[BookController::class,'update'])->name('book.update');
 
 
 

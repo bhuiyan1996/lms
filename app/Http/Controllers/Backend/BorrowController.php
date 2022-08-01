@@ -13,6 +13,7 @@ class BorrowController extends Controller
     public function list(){
 
         $borrows = Borrow::with('getBook','getreader')->get();
+        
 
         return view('backend.pages.borrow.borrow', compact('borrows'));
     }
@@ -29,9 +30,10 @@ class BorrowController extends Controller
         Borrow::create([
             // migration table -column name => input field name
             'reader_id'=>$request->reader_id,
-            'book'=>$request->book,
+            // 'reader_name'=>$request->reader_name,
+            'book'=>$request->book_name,
             'date'=>$request->date,
-            'reader_name' => $request->reader_name,
+            
         ]);
         return redirect()->route('borrow.list');
     }

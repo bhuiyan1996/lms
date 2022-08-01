@@ -10,8 +10,8 @@
             <input type="number" class="form-control" name="book_price">
             <label for="">Book Qty</label>
             <input type="number" class="form-control" name="book_qty">
-            <label for="">Book Desc</label>
-            <input type="text" class="form-control" name="book_desc">
+            <!-- <label for="">Book Desc</label>
+            <input type="text" class="form-control" name="book_desc"> -->
 
             <select class="form-select" aria-label="Default select example" name="category">
                 <option selected>Select Category</option>

@@ -19,8 +19,8 @@
 
     @foreach($borrows as $data)
       <tr>
-          <td>{{$data->reader_id}}</td>
-          <td>{{$data->reader_name}}</td>
+          <td>{{optional($data->getreader)->id}}</td>
+          <td>{{optional($data->getreader)->name}}</td>
           <td>{{optional($data->getBook)->name}}</td>
           <td>{{$data->date}}</td>
       </tr>

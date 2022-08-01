@@ -15,8 +15,8 @@ return new class extends Migration
     {
         Schema::create('borrows', function (Blueprint $table) {
             $table->id();
-            $table->string('reader_name')->nullable();
             $table->string('reader_id')->nullable();
+            $table->string('reader_name')->nullable();
             $table->string('book')->nullable();
             $table->date('date');
             $table->timestamps();

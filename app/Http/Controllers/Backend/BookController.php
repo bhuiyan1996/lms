@@ -2,17 +2,22 @@
 
 namespace App\Http\Controllers\Backend;
 
+
 use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Book;
 use Illuminate\Http\Request;
 
+
 class BookController extends Controller
 {
     public function list(){
-
-        $books=Book::paginate(5);
+// dd('hi');
+        $books=Book::with('getCategory','getTotal')->paginate(10);
         return view('backend.pages.books',compact('books'));
+
+        if()
+
     }
 
 
@@ -30,10 +35,10 @@ class BookController extends Controller
         Book::create([
             // migration table -column name => input field name
             'name'=>$request->book_name,
-            'category_id'=>$request->category,
+            'category'=>$request->category,
             'price'=>$request->book_price,
             'quantity'=>$request->book_qty,
-            'description'=>$request->book_desc,
+            // 'total_book'=>$request->book_desc,
         ]);
         return redirect()->route('book.list');
     }
@@ -52,7 +57,7 @@ public function delete($id){
         return redirect()->back();
 }
 
-public function edit($id) { 
+ public function edit($id) { 
 
     $book= Book::find($id);
  
@@ -69,7 +74,7 @@ public function edit($id) {
             'description'=>$request->book_desc,
         ]);
 
-        return redirect()->route('backend.pages.books');
+        return redirect()->route('book.list');
  }
 
 

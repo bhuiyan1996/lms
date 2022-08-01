@@ -7,7 +7,7 @@
     @csrf
     <div class="form-group">
         <label for="formGroupExampleInput">Reader Id: </label>
-        <select class="form-select" aria-label="Default select example" id="bookname" name="book">
+        <select class="form-select" aria-label="Default select example" id="bookname" name="reader_id">
                 <option selected>Select Reader Id</option>
                 @foreach($readers as $reader)
                 <option value="{{$reader->id}}">{{$reader->id}}</option>
@@ -18,7 +18,7 @@
 
     <div class="form-group">
         <label for="bookname">Book Name: </label>
-        <select class="form-select" aria-label="Default select example" id="bookname" name="book">
+        <select class="form-select" aria-label="Default select example" id="bookname" name="book_name">
                 <option selected>Select Book</option>
                 @foreach($books as $book)
                 <option value="{{$book->id}}">{{$book->name}}</option>

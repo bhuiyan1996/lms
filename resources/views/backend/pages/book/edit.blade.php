@@ -2,15 +2,15 @@
 @section('backend_content')
     <h1>Create New Book</h1>
     <div>
-        <form action="{{route('book.update')}}" method="POST">
+        <form action="{{route('book.update',$book->id)}}" method="POST">
             @csrf
             
             <label for="">Book Price</label>
-            <input type="number" class="form-control" name="book_price">
+            <input type="number" class="form-control" name="book_price" value="{{$book->price}}">
             <label for="">Book Qty</label>
-            <input type="number" class="form-control" name="book_qty">
+            <input type="number" class="form-control" name="book_qty"  value="{{$book->quantity}}">
             <label for="">Book Desc</label>
-            <input type="text" class="form-control" name="book_desc">
+            <input type="text" class="form-control" name="book_desc" value="{{$book->description}}">
 
             
 

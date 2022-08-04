@@ -9,8 +9,9 @@
                 </a>
                 <div class="sb-sidenav-menu-heading">Interface</div>
 
-                <a class="nav-link" href="{{route('book.list')}}">Books</a>
+               
                 <a class="nav-link" href="{{route('category.list')}}">Categories</a>
+                <a class="nav-link" href="{{route('book.list')}}">Books</a>
                 <a class="nav-link" href="{{route('reader.list')}}">Readers</a>
                 <a class="nav-link" href="{{route('borrow.list')}}">Borrow</a>
 

@@ -12,12 +12,12 @@ class Book extends Model
 
     public function getCategory()
     {
-        return $this->belongsTo(Category::class, 'category_id', 'id');
+        return $this->belongsTo(Category::class, 'category', 'id');
     }
 
-    public function getTotal()
-    {
-        return $this->hasMany(Borrow::class, 'total_quantity','book');
+    // public function getTotal()
+    // {
+    //     return $this->hasMany(Borrow::class, 'total','book');
 
-    }
+    // }
 }

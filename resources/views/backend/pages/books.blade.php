@@ -15,7 +15,7 @@
             <th scope="col">Price</th>
             <th scope="col">Quantity</th>
             
-            <th scope="col">Total Book</th>
+            <th scope="col">Available</th>
             <th scope="col">Action</th>
 
         </tr>
@@ -27,8 +27,9 @@
             <td scope="col">{{$data->name}}</td>
             <td scope="col">{{optional($data->getCategory)->name}}</td>
             <td scope="col">{{$data->price}}</td>
+            <td scope="col">{{$data->total}}</td>
             <td scope="col">{{$data->quantity}}</td>
-            <td scope="col">{{optional($data->getTotal)->quantity-1}}</td>
+            
             <td>
                 <!-- <a class="btn btn-primary" href="{{route('delete.book', $data->id)}}">Delete</a> -->
                 <a class="btn btn-success" href="{{route('view.book', $data->id)}}">View</a>

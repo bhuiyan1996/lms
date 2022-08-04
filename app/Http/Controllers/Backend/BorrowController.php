@@ -26,7 +26,7 @@ class BorrowController extends Controller
 
     
     public function store(Request $request){
-// dd($request);
+
         Borrow::create([
             // migration table -column name => input field name
             'reader_id'=>$request->reader_id,
@@ -35,6 +35,23 @@ class BorrowController extends Controller
             'date'=>$request->date,
             
         ]);
-        return redirect()->route('borrow.list');
+
+        $book=Book::find($request->book_name)->decrement('quantity');
+      
+
+        return redirect()->route('borrow.list', compact('book'));
     }
+    
+    public function delete($id){
+       
+
+        $borrow= Borrow::find($id);
+   
+       Book::find($borrow->book)->increment('quantity');
+
+       $borrow->delete();
+
+        return redirect()->back();
+}
+
 }

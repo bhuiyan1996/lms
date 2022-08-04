@@ -21,7 +21,7 @@ return new class extends Migration
             $table->double('price');
             $table->integer('quantity');
 
-            $table->integer('total_book')->nullable();
+            $table->integer('total')->nullable();
 
             // $table->text('description')->nullable();
             $table->timestamps();

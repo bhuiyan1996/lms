@@ -13,10 +13,10 @@ class BookController extends Controller
 {
     public function list(){
 // dd('hi');
-        $books=Book::with('getCategory','getTotal')->paginate(10);
+        $books=Book::with('getCategory')->paginate(10);
         return view('backend.pages.books',compact('books'));
 
-        if()
+    
 
     }
 
@@ -38,6 +38,7 @@ class BookController extends Controller
             'category'=>$request->category,
             'price'=>$request->book_price,
             'quantity'=>$request->book_qty,
+            'total'=>$request->book_qty,
             // 'total_book'=>$request->book_desc,
         ]);
         return redirect()->route('book.list');
@@ -69,9 +70,10 @@ public function delete($id){
  {
         $book=Book::find($id);
         $book->update([
+            'name'=>$request->name,
             'price'=>$request->book_price,
-            'quantity'=>$request->book_qty,
-            'description'=>$request->book_desc,
+            'total'=>$request->book_qty,
+            // 'description'=>$request->book_desc,
         ]);
 
         return redirect()->route('book.list');

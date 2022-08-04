@@ -34,8 +34,12 @@ Route::get('/', [LoginController::class, 'login'])->name('login');
 Route::post('/login-check', [LoginController::class, 'loginCheck'])->name('loginCheck');
 Route::get('/registration', [LoginController::class, 'registration'])->name('registration');
 Route::post('/do-registration', [LoginController::class, 'doRegistration'])->name('doRegistration');
-Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
+
+Route::group(['middleware'=>['auth','CheckAdmin'],'prefix'=>'admin'],function(){
+
+
+Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard',[DashboardController::class,'viewDashboard'])->name('dashboard');
 Route::get('/about',[AboutUsController::class,'index'])->name('about');
@@ -73,3 +77,6 @@ Route::get('/reader/delete/{id}',[ReaderController::class,'delete'])->name('dele
 Route::get('/borrow',[BorrowController::class,'list'])->name('borrow.list');
 Route::get('/borrow/form',[BorrowController::class,'form'])->name('form.borrow');
 Route::post('/borrow/store',[BorrowController::class,'store'])->name('store.borrow');
+Route::get('/borrow/delete/{id}',[BorrowController::class,'delete'])->name('delete.borrow');
+
+});

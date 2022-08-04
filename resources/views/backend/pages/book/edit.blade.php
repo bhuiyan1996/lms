@@ -5,12 +5,15 @@
         <form action="{{route('book.update',$book->id)}}" method="POST">
             @csrf
             
+            <label for="">Book Name</label>
+            <input type="text" class="form-control" name="name" value="{{$book->name}}">
             <label for="">Book Price</label>
             <input type="number" class="form-control" name="book_price" value="{{$book->price}}">
             <label for="">Book Qty</label>
-            <input type="number" class="form-control" name="book_qty"  value="{{$book->quantity}}">
-            <label for="">Book Desc</label>
-            <input type="text" class="form-control" name="book_desc" value="{{$book->description}}">
+            <input type="number" class="form-control" name="book_qty"  value="{{$book->total}}">
+
+            <!-- <label for="">Book Desc</label>
+            <input type="text" class="form-control" name="book_desc" value="{{$book->description}}"> -->
 
             
 

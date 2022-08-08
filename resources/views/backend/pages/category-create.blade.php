@@ -15,10 +15,10 @@
         <textarea class="form-control" name="description" id="" placeholder="Enter Description"></textarea>
     </div>
 
-    <div class="form-group">
+    <!-- <div class="form-group">
         <label for="formGroupExampleInput2">Upload Image</label>
         <input type="file" name="image" class="form-control">
-    </div>
+    </div> -->
 
     <button class="btn btn-success" >Submit</button>
 </form>

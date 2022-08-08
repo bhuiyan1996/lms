@@ -31,18 +31,30 @@ class BookController extends Controller
 
 
     public function store(Request $request){
+        
+        if($request->hasFile('image'))
+        {
+            $file=$request->file('image');
+            $fileRename="book_".rand(0,1000000).date('Ymdhis').".".$file->getClientOriginalExtension();
+            $file->storeAs('book',$fileRename);//store image into project
+        }
 
         Book::create([
             // migration table -column name => input field name
             'name'=>$request->book_name,
-            'category'=>$request->category,
             'price'=>$request->book_price,
             'quantity'=>$request->book_qty,
+            'category'=>$request->category,
             'total'=>$request->book_qty,
+            'image'=>$fileRename,
             // 'total_book'=>$request->book_desc,
         ]);
+    //    dd($request)->Y;
         return redirect()->route('book.list');
     }
+
+
+    
     public function views($id) { 
 
        $book= Book::find($id);

@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('category');
             $table->double('price');
             $table->integer('quantity');
+            $table->text('image');
 
             $table->integer('total')->nullable();
 

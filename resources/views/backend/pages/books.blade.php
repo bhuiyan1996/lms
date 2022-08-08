@@ -16,6 +16,7 @@
             <th scope="col">Quantity</th>
             
             <th scope="col">Available</th>
+            <th scope="col">Image</th>
             <th scope="col">Action</th>
 
         </tr>
@@ -29,6 +30,10 @@
             <td scope="col">{{$data->price}}</td>
             <td scope="col">{{$data->total}}</td>
             <td scope="col">{{$data->quantity}}</td>
+            
+            <td scope="col">
+                <img style="width:60px;" src="{{url('/uploads/book/'.$data->image)}}" alt="" srcset="">
+             </td>
             
             <td>
                 <!-- <a class="btn btn-primary" href="{{route('delete.book', $data->id)}}">Delete</a> -->

@@ -6,7 +6,7 @@
 <head>
 <style>
 body {
-  background-image: url('iubat.jpg');
+  background-image: url('/backend/assets/iubat.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;  
   background-size: cover;
@@ -15,9 +15,8 @@ body {
 </head>
 <body>
 
-<h2>Background Cover</h2>
-
-<p>Set the background-size property to "cover" and the background image will cover the entire element, in this case the body element.</p>
+<h1 > Library M System</h1>
+<!-- <img cla="width:1200px;" src="{{url('/backend/assets/iubat.jpg')}}" alt="" srcset=""> -->
 
 </body>
 </html>

@@ -48,9 +48,14 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
             </div>
 
             <div>
-              <p class="mb-0">Don't have an account? <a href="{{route('registration')}}" class="text-white-50 fw-bold">Sign Up</a>
+              <p class="mb-0">Forget Password <a href="#" class="text-white-50 fw-bold">Sign Up</a>
               </p>
             </div>
+            
+            <!-- <div>
+              <p class="mb-0">Don't have an account? <a href="{{route('registration')}}" class="text-white-50 fw-bold">Sign Up</a>
+              </p>
+            </div> -->
 
           </div>
         </div>

@@ -52,6 +52,17 @@ class BorrowController extends Controller
        $borrow->delete();
 
         return redirect()->back();
-}
+    }
+    public function search(Request $request){
+
+    //    dd($request->date);
+//        dd(request()->product);
+
+        $borrows=Borrow::where('date','like','%'.$request->date.'%')->get();
+        // dd($request->date);
+         return view('backend.pages.borrow.search',compact('borrows'));
+
+
+    }
 
 }

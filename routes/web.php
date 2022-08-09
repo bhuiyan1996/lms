@@ -78,5 +78,6 @@ Route::get('/borrow',[BorrowController::class,'list'])->name('borrow.list');
 Route::get('/borrow/form',[BorrowController::class,'form'])->name('form.borrow');
 Route::post('/borrow/store',[BorrowController::class,'store'])->name('store.borrow');
 Route::get('/borrow/delete/{id}',[BorrowController::class,'delete'])->name('delete.borrow');
+Route::get('/search',[BorrowController::class,'search'])->name('search');
 
 });

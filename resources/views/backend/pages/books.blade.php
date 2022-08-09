@@ -1,6 +1,8 @@
 @extends('backend.master')
 
 @section('backend_content')
+
+
 <h1> Book List</h1>
 
 <a href="{{route('form.book')}}" class="btn btn-primary">Create book</a>

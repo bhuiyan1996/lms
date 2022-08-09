@@ -84,8 +84,8 @@ public function delete($id){
         $book->update([
             'name'=>$request->name,
             'price'=>$request->book_price,
-            'total'=>$request->book_qty,
-            // 'description'=>$request->book_desc,
+            'total'=>$request->book_qt,
+            'quantity'=>$request->book_qty,
         ]);
 
         return redirect()->route('book.list');

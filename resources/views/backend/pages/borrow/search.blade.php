@@ -2,6 +2,7 @@
 
 @section('backend_content')
 
+
 <table class="table">
   <thead>
   <h1>Borrow List</h1>

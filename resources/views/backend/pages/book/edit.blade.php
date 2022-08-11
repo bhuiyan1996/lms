@@ -10,9 +10,9 @@
             <label for="">Book Price</label>
             <input type="number" class="form-control" name="book_price" value="{{$book->price}}">
             <label for="">Book Qty</label>
-            <input type="number" class="form-control" name="book_qt"  value="{{$book->total}}">
-            <label for="">Available</label>
-            <input type="number" class="form-control" name="book_qty"  value="{{$book->quantity}}">
+            <input type="number" class="form-control" name="book_qt"  value="">
+            <!-- <label for="">Available</label> -->
+            <!-- <input type="number" class="form-control" name="book_qty"  value=""> -->
 
             <!-- <label for="">Book Desc</label>
             <input type="text" class="form-control" name="book_desc" value="{{$book->description}}"> -->

@@ -13,4 +13,9 @@ class DashboardController extends Controller
     public function viewDashboard(){
         return view('backend.dashboard.dashboard');
     }
+
+
+    public function adminadd(){
+        return view('backend.dashboard.adminadd-creat');
+    }
 }

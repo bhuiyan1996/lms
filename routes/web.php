@@ -7,6 +7,8 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ReaderController;
 use App\Http\Controllers\Backend\BorrowController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ForgotController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +36,9 @@ Route::get('/', [LoginController::class, 'login'])->name('login');
 Route::post('/login-check', [LoginController::class, 'loginCheck'])->name('loginCheck');
 Route::get('/registration', [LoginController::class, 'registration'])->name('registration');
 Route::post('/do-registration', [LoginController::class, 'doRegistration'])->name('doRegistration');
+Route::get('/forgotpass', [ForgotController::class, 'forgotdo'])->name('forgotpass');
+Route::get('/forgotpassdo', [ForgotController::class, 'forgotpass'])->name('forgotpassdo');
+Route::post('/forgotPassword', [ForgotController::class, 'forgotPassword'])->name('forgotPassword');
 
 
 Route::group(['middleware'=>['auth','CheckAdmin'],'prefix'=>'admin'],function(){
@@ -42,6 +47,9 @@ Route::group(['middleware'=>['auth','CheckAdmin'],'prefix'=>'admin'],function(){
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/dashboard',[DashboardController::class,'viewDashboard'])->name('dashboard');
+Route::get('/dashboard/adminadd',[DashboardController::class,'adminadd'])->name('admin.add');
+
+
 Route::get('/about',[AboutUsController::class,'index'])->name('about');
 
 Route::get('/categories',[CategoryController::class,'list'])->name('category.list');

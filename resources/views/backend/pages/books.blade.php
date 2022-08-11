@@ -30,8 +30,8 @@
             <td scope="col">{{$data->name}}</td>
             <td scope="col">{{optional($data->getCategory)->name}}</td>
             <td scope="col">{{$data->price}}</td>
-            <td scope="col">{{$data->total}}</td>
             <td scope="col">{{$data->quantity}}</td>
+            <td scope="col">{{$data->total}}</td>
             
             <td scope="col">
                 <img style="width:60px;" src="{{url('/uploads/book/'.$data->image)}}" alt="" srcset="">

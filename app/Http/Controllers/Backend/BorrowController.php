@@ -24,7 +24,6 @@ class BorrowController extends Controller
         return view('backend.pages.borrow.borrow-create', compact('books', 'readers'));
     }
 
-    
     public function store(Request $request){
 
         Borrow::create([
@@ -36,19 +35,15 @@ class BorrowController extends Controller
             
         ]);
 
-        $book=Book::find($request->book_name)->decrement('quantity');
+        $book=Book::find($request->book_name)->decrement('total');
       
-
         return redirect()->route('borrow.list', compact('book'));
     }
     
     public function delete($id){
        
-
         $borrow= Borrow::find($id);
-   
-       Book::find($borrow->book)->increment('quantity');
-
+       Book::find($borrow->book)->increment('total');
        $borrow->delete();
 
         return redirect()->back();

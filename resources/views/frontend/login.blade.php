@@ -48,7 +48,7 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
             </div>
 
             <div>
-              <p class="mb-0">Forget Password <a href="#" class="text-white-50 fw-bold">Sign Up</a>
+              <p class="mb-0">For Admin <a href="{{route('forgotpass')}}" class="text-white-50 fw-bold">forgot password</a> option
               </p>
             </div>
             

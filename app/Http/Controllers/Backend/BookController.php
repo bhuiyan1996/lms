@@ -43,8 +43,8 @@ class BookController extends Controller
             // migration table -column name => input field name
             'name'=>$request->book_name,
             'price'=>$request->book_price,
-            'quantity'=>$request->book_qty,
             'category'=>$request->category,
+            'quantity'=>$request->book_qty,
             'total'=>$request->book_qty,
             'image'=>$fileRename,
             // 'total_book'=>$request->book_desc,
@@ -84,9 +84,12 @@ public function delete($id){
         $book->update([
             'name'=>$request->name,
             'price'=>$request->book_price,
-            'total'=>$request->book_qt,
-            'quantity'=>$request->book_qty,
+            'quantity'=>$book->quantity+$request->book_qt,
+            'total'=>$book->total + $request->book_qt,
+            // 'total'=>$book->total + $request->book_qt,
+            
         ]);
+        // $bookk=Book::find($request->quantity)+$request->book_qt;
 
         return redirect()->route('book.list');
  }

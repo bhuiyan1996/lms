@@ -19,10 +19,12 @@ return new class extends Migration
             $table->string('name');
             $table->string('category');
             $table->double('price');
+            
             $table->integer('quantity');
+            $table->integer('total')->nullable();
             $table->text('image');
 
-            $table->integer('total')->nullable();
+            
 
             // $table->text('description')->nullable();
             $table->timestamps();

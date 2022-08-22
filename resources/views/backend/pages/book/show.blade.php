@@ -16,7 +16,7 @@
         <h3>{{$book->quantity}}</h3>
 
         <label for="">Available</label>
-        <h3>Null</h3>
+        <h3>{{$book->total}}</h3>
 
             <!-- <input type="text" class="form-control" value="{{$book->name}}" readonly>
             <label for="">Book Price</label>

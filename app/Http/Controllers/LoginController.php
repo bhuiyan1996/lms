@@ -40,6 +40,7 @@ class LoginController extends Controller
 
     public function doRegistration(Request $request)
     {
+        // dd($request->role);
 
             User::create([
                 'name'=>$request->name,

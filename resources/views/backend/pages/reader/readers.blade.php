@@ -16,7 +16,7 @@
       <th scope="col">Phone No</th>
       <th scope="col">Address</th>
       <th scope="col">Gender</th>
-      <th scope="col">Taken Book</th>
+      <!-- <th scope="col">Taken Book</th> -->
       <th scope="col">Action</th>
     </tr>
   </thead>
@@ -32,7 +32,7 @@
       <td scope="col">{{$data->phone}}</th>
       <td scope="col">{{$data->address}}</th>
       <td scope="col">{{$data->gender}}</th>
-      <td scope="col">00</th>
+      <!-- <td scope="col">00</th> -->
 
       <td>
                 <a class="btn btn-primary" href="{{route('view.reader', $data->id)}}">View</a>

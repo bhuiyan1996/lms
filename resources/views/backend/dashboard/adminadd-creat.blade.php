@@ -34,7 +34,7 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
                     <i class="fas fa-user fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="text" id="form3Example1c" class="form-control" name="name"/>
-                      <label class="form-label" for="form3Example1c">Your Name</label>
+                      <label class="form-label" for="form3Example1c">new Admin Name</label>
                     </div>
                   </div>
 
@@ -50,7 +50,7 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
                     <i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="email" id="form3Example3c" class="form-control" name="email"/>
-                      <label class="form-label" for="form3Example3c">Your Email</label>
+                      <label class="form-label" for="form3Example3c">Email</label>
                     </div>
                   </div>
 
@@ -58,7 +58,7 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
                     <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
                     <div class="form-outline flex-fill mb-0">
                       <input type="password" id="form3Example4c" class="form-control" name="password"/>
-                      <label class="form-label" for="form3Example4c">Password</label>
+                      <label class="form-label" for="form3Example4c">Set Password</label>
                     </div>
                   </div>
 

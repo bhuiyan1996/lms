@@ -52,13 +52,10 @@ Route::get('/dashboard/adminadd',[DashboardController::class,'adminadd'])->name(
 
 Route::get('/about',[AboutUsController::class,'index'])->name('about');
 
+//  categories operation
 Route::get('/categories',[CategoryController::class,'list'])->name('category.list');
 Route::get('/category/create',[CategoryController::class,'create'])->name('category.create');
 Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
-
-
-
-
 
 
 //  book operation
@@ -70,16 +67,12 @@ Route::get('/book/delete/{id}',[BookController::class,'delete'])->name('delete.b
 Route::get('/book/edit/{id}',[BookController::class,'edit'])->name('book.edit');
 Route::post('/book/update/{id}',[BookController::class,'update'])->name('book.update');
 
-
-
-
 //  reader operation
 Route::get('/readers',[ReaderController::class,'list'])->name('reader.list');
 Route::get('/reader/form',[ReaderController::class,'form'])->name('form.reader');
 Route::post('/reader/store',[ReaderController::class,'store'])->name('store.reader');
 Route::get('/reader/view/{id}',[ReaderController::class,'views'])->name('view.reader');
 Route::get('/reader/delete/{id}',[ReaderController::class,'delete'])->name('delete.reader');
-
 
 //  borrow operation
 Route::get('/borrow',[BorrowController::class,'list'])->name('borrow.list');

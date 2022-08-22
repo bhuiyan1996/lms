@@ -19,7 +19,7 @@ return new class extends Migration
             $table->integer('refid');
             // $table->integer('id');
             $table->string('email');
-            $table->integer('phone');
+            $table->string('phone');
             $table->text('address');
             $table->enum('gender', ['male', 'female'])->default('male');
             $table->timestamps();

@@ -18,12 +18,12 @@
 
     <div class="form-group">
         <label for="formGroupExampleInput">Phone No: </label>
-        <h3>{{$reader->email}}</h3>
+        <h3>{{$reader->phone}}</h3>
     </div>
 
     <div class="form-group">
         <label for="formGroupExampleInput">Emile: </label>
-        <h3>{{$reader->phone}}</h3>
+        <h3>{{$reader->email}}</h3>
     </div>
 
     <div class="form-group">

@@ -18,8 +18,7 @@
             </div>
         </div>
         <div class="sb-sidenav-footer">
-            <div class="small">Logged in as:</div>
-            Start Bootstrap
-        </div>
+            <div class="small">IUBAT LMS</div>
+           
     </nav>
 </div>

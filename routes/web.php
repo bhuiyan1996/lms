@@ -7,6 +7,7 @@ use App\Http\Controllers\Backend\CategoryController;
 use App\Http\Controllers\Backend\ReaderController;
 use App\Http\Controllers\Backend\BorrowController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ForgotPasswordController;
 use App\Http\Controllers\ForgotController;
 
 
@@ -82,3 +83,12 @@ Route::get('/borrow/delete/{id}',[BorrowController::class,'delete'])->name('dele
 Route::get('/search',[BorrowController::class,'search'])->name('search');
 
 });
+
+
+
+// password 
+  
+Route::get('forget-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('forget.password.get');
+Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
+Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
+Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');

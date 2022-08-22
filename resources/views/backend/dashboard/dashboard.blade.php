@@ -19,8 +19,8 @@
 <table>
   <td>
 <img style="width:500px;" src="{{url('/backend/assets/images.jpg')}}" alt="" srcset="">
-<a href="{{route('admin.add')}}" class="btn btn-primary">Admin Add</a>
-</td>
+<!-- <a href="{{route('admin.add')}}" class="btn btn-primary">Admin Add</a>
+</td> -->
 </table>
 
 </body>

@@ -21,7 +21,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone');
             $table->text('address');
-            $table->enum('gender', ['male', 'female'])->default('male');
+            $table->enum('gender', ['Male', 'Female'])->default('Male');
+            $table->text('status')->default('Inactive');
             $table->timestamps();
         });
     }

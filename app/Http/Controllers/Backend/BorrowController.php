@@ -35,6 +35,13 @@ class BorrowController extends Controller
             
         ]);
 
+        $reader=Reader::where ('id',$request->reader_id)->first();
+        // dd($reader);
+        $reader->update([
+            'status'=>'Active'
+        ]);
+
+        // $reader
         $book=Book::find($request->book_name)->decrement('total');
       
         return redirect()->route('borrow.list', compact('book'));
@@ -44,6 +51,13 @@ class BorrowController extends Controller
        
         $borrow= Borrow::find($id);
        Book::find($borrow->book)->increment('total');
+
+    //    $reader=Reader::where ($borrow->book)->first();
+    //    // dd($reader);
+    //    $reader->update([
+    //        'status'=>'Inctive'
+    //    ]);
+
        $borrow->delete();
 
         return redirect()->back();

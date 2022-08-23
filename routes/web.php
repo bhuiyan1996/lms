@@ -67,6 +67,7 @@ Route::get('/book/view/{id}',[BookController::class,'views'])->name('view.book')
 Route::get('/book/delete/{id}',[BookController::class,'delete'])->name('delete.book');
 Route::get('/book/edit/{id}',[BookController::class,'edit'])->name('book.edit');
 Route::post('/book/update/{id}',[BookController::class,'update'])->name('book.update');
+Route::get('/book_search',[BookController::class,'search'])->name('search.book');
 
 //  reader operation
 Route::get('/readers',[ReaderController::class,'list'])->name('reader.list');
@@ -74,6 +75,10 @@ Route::get('/reader/form',[ReaderController::class,'form'])->name('form.reader')
 Route::post('/reader/store',[ReaderController::class,'store'])->name('store.reader');
 Route::get('/reader/view/{id}',[ReaderController::class,'views'])->name('view.reader');
 Route::get('/reader/delete/{id}',[ReaderController::class,'delete'])->name('delete.reader');
+Route::get('/reader/edit/{id}',[ReaderController::class,'edit'])->name('edit.reader');
+Route::post('/reader/update/{id}',[ReaderController::class,'update'])->name('update.reader');
+
+// Route::post('/reader/update/{id}',[ReaderController::class,'update'])->name('update.reader');
 
 //  borrow operation
 Route::get('/borrow',[BorrowController::class,'list'])->name('borrow.list');

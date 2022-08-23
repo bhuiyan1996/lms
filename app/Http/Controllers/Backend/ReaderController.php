@@ -47,6 +47,27 @@ class ReaderController extends Controller
              $reader =  Reader::find($id)->delete();
             return redirect()->back();
         }
+        public function edit($id){
+
+            $reader=Reader::find($id);
+            return view('backend.pages.reader.reader_edit',compact('reader'));
+            
+        }
+
+        public function update(Request $request,$id){
+
+            $reader=Reader::find($id);
+
+            $reader->update([
+            'name'=>$request->reader_name,
+            'phone'=>$request->reader_phn,
+            'email'=>$request->reader_email,
+            'address'=>$request->reader_address,
+
+        ]);
+
+        return redirect()->route('reader.list');
+        }
 
      }
 

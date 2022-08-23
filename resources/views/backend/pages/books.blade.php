@@ -4,6 +4,15 @@
 
 
 <h1> Book List</h1>
+<div class="hero__search__form">
+                        <form action="{{route('search.book')}}" method="get">
+                            <div class="hero__search__categories">
+                                <span class="arrow_carrot-down"></span>
+                            </div>
+                            <input name="name" type="text" placeholder="What do yo u need?">
+                            <button type="submit" class="site-btn">my search</button>
+                        </form>
+</div>
 
 <a href="{{route('form.book')}}" class="btn btn-primary">Create book</a>
 
@@ -47,5 +56,5 @@
         @endforeach
     </tbody>
 </table>
-{{$books->links()}}
+<!-- {{$books->links()}} -->
 @endsection

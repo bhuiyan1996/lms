@@ -3,6 +3,8 @@
 @section('backend_content')
 <h1> Reader List</h1>
 
+
+
 <a href="{{route('form.reader')}}" class="btn btn-primary">Add Reader</a>
 
 
@@ -36,7 +38,7 @@
 
       <td>
                 <a class="btn btn-primary" href="{{route('view.reader', $data->id)}}">View</a>
-                <a class="btn btn-success" href="#">Update</a>
+                <a class="btn btn-success" href="{{route('edit.reader', $data->id)}}">Update</a>
                 <a  class="btn btn-danger" href="{{route('delete.reader', $data->id)}}">Delete</a>
       </td>
       

@@ -13,7 +13,7 @@ class BookController extends Controller
 {
     public function list(){
 // dd('hi');
-        $books=Book::with('getCategory')->paginate(10);
+        $books=Book::with('getCategory')->get();
         return view('backend.pages.books',compact('books'));
 
     
@@ -23,7 +23,7 @@ class BookController extends Controller
 
     public function form()
     {
-        $categories=Category::all();
+        $categories=Category::all();  //kono relation er kaj korle evabe model define kore dite hoy
 //        dd($categories);
         return view('backend.pages.book.form',compact('categories'));
     }
@@ -93,7 +93,18 @@ public function delete($id){
 
         return redirect()->route('book.list');
  }
+ public function search(Request $request){
 
+    //    dd($request->name);
+
+        $books=Book::where('name','like','%'.$request->name.'%')->get();
+        // dd($request->name);
+         return view('backend.pages.book.book_search',compact('books'));
+         
+        //  return view('backend.pages.book.book_search',compact('books'));
+
+
+    }
 
 
 

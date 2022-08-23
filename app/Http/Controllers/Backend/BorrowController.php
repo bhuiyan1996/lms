@@ -13,8 +13,6 @@ class BorrowController extends Controller
     public function list(){
 
         $borrows = Borrow::with('getBook','getreader')->get();
-        
-
         return view('backend.pages.borrow.borrow', compact('borrows'));
     }
     public function form()

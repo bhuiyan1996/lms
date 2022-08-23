@@ -2,29 +2,32 @@
 
 @section('backend_content')
 
-<table class="table">
-  <thead>
-  <h1>Borrow List</h1>
+<table>
+<h1><b>Borrow List</b></h1>
+<tr>
+<th> <a href="{{route('form.borrow')}}" class="btn btn-success">Borrow Form</a> </th>
 
-  <div class="hero__search__form">
+<th> <div class="hero__search__form">
                         <form action="{{route('search')}}" method="get">
-                            <div class="hero__search__categories">
+                            <div class="form-outline">
                                 <span class="arrow_carrot-down"></span>
                             </div>
                             <input name="date" type="text" placeholder="What do yo u need?">
-                            <button type="submit" class="site-btn">my search</button>
-                        </form>
-                    </div>
+                            <button type="submit" class="btn btn-primary">my search</button>
+                        </form></div>
+</th>
+  
+</table>
 
-  <a href="{{route('form.borrow')}}" class="btn btn-success">Borrow Form</a>
-
-    <tr>
+<table class="table table-sm table-dark"> 
+<thead>
+  <tr>
       <th scope="col">Reader Id</th>
       <th scope="col">Reader Name</th>
       <th scope="col">Book Name</th>
       <th scope="col">Return Date</th>
       <th scope="col">Action</th>
-    </tr>
+  </tr>
   </thead>
   <tbody>
 

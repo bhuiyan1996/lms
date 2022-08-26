@@ -11,15 +11,12 @@ use Illuminate\Http\Request;
 
 class BookController extends Controller
 {
-    public function list(){
+    public function list()
+    {
 // dd('hi');
-        $books=Book::with('getCategory')->get();
+        $books=Book::with('getCategory')->paginate(10);
         return view('backend.pages.books',compact('books'));
-
-    
-
     }
-
 
     public function form()
     {
@@ -27,8 +24,6 @@ class BookController extends Controller
 //        dd($categories);
         return view('backend.pages.book.form',compact('categories'));
     }
-
-
 
     public function store(Request $request){
         
@@ -53,8 +48,6 @@ class BookController extends Controller
         return redirect()->route('book.list');
     }
 
-
-    
     public function views($id) { 
 
        $book= Book::find($id);
@@ -63,23 +56,23 @@ class BookController extends Controller
 
     }
 
-public function delete($id){
+    public function delete($id){
 
         $book= Book::find($id)->delete();
 
         return redirect()->back();
-}
+    }
 
- public function edit($id) { 
+    public function edit($id) { 
 
     $book= Book::find($id);
  
     return view ('backend.pages.book.edit',compact('book'));
 
- }
+    }
 
- public function update(Request $request,$id)
- {
+    public function update(Request $request,$id){
+        
         $book=Book::find($id);
         $book->update([
             'name'=>$request->name,
@@ -97,11 +90,10 @@ public function delete($id){
 
     //    dd($request->name);
 
-        $books=Book::where('name','like','%'.$request->name.'%')->get();
+        $books=Book::where('name','like','%'.$request->name.'%')->paginate(10);
         // dd($request->name);
          return view('backend.pages.book.book_search',compact('books'));
-         
-        //  return view('backend.pages.book.book_search',compact('books'));
+
 
 
     }

@@ -1,6 +1,6 @@
 @extends('backend.master')
 @section('backend_content')
-    <h1>Create New Book</h1>
+    <h1>Update Book Info</h1>
     <div>
         <form action="{{route('book.update',$book->id)}}" method="POST">
             @csrf

@@ -28,26 +28,22 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
             <div class="row justify-content-center">
               <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
 
-                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Add New Category</p>
+                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Edit Category</p>
 
                 <div>
 
-<form action="{{route('category.store')}}" method="post">
+<form action="{{route('category.update',$cat->id)}}" method="post">
     @csrf
     <div class="form-group">
         <label for="formGroupExampleInput">Enter Name: </label>
-        <input name="category_name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Category Name">
+        <input name="category_name" type="text" class="form-control"  value="{{$cat->name}}">
     </div>
 
     <div class="form-group">
         <label for="formGroupExampleInput2">Enter Description</label>
-        <textarea class="form-control" name="description" id="" placeholder="Enter Description"></textarea>
+        <input name="description" type="text"  class="form-control"  value="{{$cat->description}}"> </input>
     </div>
 
-    <!-- <div class="form-group">
-        <label for="formGroupExampleInput2">Upload Image</label>
-        <input type="file" name="image" class="form-control">
-    </div> -->
 
     <button class="btn btn-success" >Submit</button>
 </form>

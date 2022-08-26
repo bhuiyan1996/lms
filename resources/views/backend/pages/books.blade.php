@@ -2,21 +2,30 @@
 
 @section('backend_content')
 
+<table class="mx-5">
 
-<h1> Book List</h1>
-<div class="hero__search__form">
+<tr> 
+<th> <a href="{{route('form.book')}}" class="btn btn-primary">Add book</a> </th>
+<th><pre>                                                                                                     
+        
+      </pre></th>
+<th> <div class="hero__search__form">
                         <form action="{{route('search.book')}}" method="get">
                             <div class="hero__search__categories">
                                 <span class="arrow_carrot-down"></span>
                             </div>
                             <input name="name" type="text" placeholder="What do yo u need?">
-                            <button type="submit" class="site-btn">my search</button>
-                        </form>
-</div>
+                            <button type="submit" class="btn btn-primary">my search</button>
+                        </form></div>
+        </th>
+</tr>
+ 
 
-<a href="{{route('form.book')}}" class="btn btn-primary">Create book</a>
+</table>
 
-<table class="table">
+<div class="row mx-5 my-3" id="printTable">
+<h1><b>Book List</b>  <button class="btn btn-success" onclick="printdiv()">Print</button> </h1>
+<table class="table table-striped table-dark"  >
     <thead>
         <tr>
             <th scope="col">ID</th>
@@ -49,12 +58,26 @@
             <td>
                 <!-- <a class="btn btn-primary" href="{{route('delete.book', $data->id)}}">Delete</a> -->
                 <a class="btn btn-success" href="{{route('view.book', $data->id)}}">View</a>
-                <a  class="btn btn-danger" href="{{route('book.edit', $data->id)}}">Edit</a>
+                <a  class="btn btn-primary" href="{{route('book.edit', $data->id)}}">Update</a>
             </td>
 
         </tr>
         @endforeach
     </tbody>
 </table>
-<!-- {{$books->links()}} -->
+</div>
+
+{{$books->links()}}
+
+<script>
+    function printdiv() {
+        let printContents = document.getElementById('printTable').innerHTML;
+        let originalContents = document.body.innerHTML;
+        document.body.innerHTML = printContents;
+        window.print();
+        document.body.innerHTML = originalContents;
+    }
+
+</script>
+
 @endsection

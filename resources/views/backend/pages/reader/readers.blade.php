@@ -1,14 +1,13 @@
 @extends('backend.master')
 
 @section('backend_content')
-<h1> Reader List</h1>
 
-
-
+<div class="mx-5 my-5">
 <a href="{{route('form.reader')}}" class="btn btn-primary">Add Reader</a>
-
-
-<table class="table table-striped">
+</div>
+<div class="row mx-5 my-3">
+<h1> Reader List</h1>
+<table class="table table-striped table-dark" >
   <thead>
     <tr>
       <th scope="col">SL</th>
@@ -47,5 +46,6 @@
     @endforeach
   </tbody>
 </table>
+</div>
 
 @endsection

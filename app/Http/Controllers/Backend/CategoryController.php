@@ -29,4 +29,20 @@ class CategoryController extends Controller
         return view('backend.pages.category-create');
     }
 
+    public function edit($id)
+{
+    $cat=Category::find($id);
+    return view('backend.pages.cat_edit',compact('cat'));
+}
+public function update(Request $request , $id){
+            // dd($requers->all());
+            $cat=Category::find($id);
+            $cat->update([
+                // column name => blade input field name
+                'name'=> $request->category_name,
+                'description' =>$request->description,
+            ]);
+            return redirect()->route('category.list',compact('cat'));
+        }
+
 }

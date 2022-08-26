@@ -57,6 +57,8 @@ Route::get('/about',[AboutUsController::class,'index'])->name('about');
 Route::get('/categories',[CategoryController::class,'list'])->name('category.list');
 Route::get('/category/create',[CategoryController::class,'create'])->name('category.create');
 Route::post('/category/store',[CategoryController::class,'store'])->name('category.store');
+Route::get('/category/edit/{id}',[CategoryController::class,'edit'])->name('category.edit');
+Route::post('/category/update/{id}',[CategoryController::class,'update'])->name('category.update');
 
 
 //  book operation
@@ -77,8 +79,6 @@ Route::get('/reader/view/{id}',[ReaderController::class,'views'])->name('view.re
 Route::get('/reader/delete/{id}',[ReaderController::class,'delete'])->name('delete.reader');
 Route::get('/reader/edit/{id}',[ReaderController::class,'edit'])->name('edit.reader');
 Route::post('/reader/update/{id}',[ReaderController::class,'update'])->name('update.reader');
-
-// Route::post('/reader/update/{id}',[ReaderController::class,'update'])->name('update.reader');
 
 //  borrow operation
 Route::get('/borrow',[BorrowController::class,'list'])->name('borrow.list');

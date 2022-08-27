@@ -22,7 +22,7 @@ return new class extends Migration
             
             $table->integer('quantity');
             $table->integer('total')->nullable();
-            $table->text('image');
+            $table->text('image')->nullable();
 
             
 

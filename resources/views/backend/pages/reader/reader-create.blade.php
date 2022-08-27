@@ -37,32 +37,32 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
     @csrf
     <div class="form-group">
         <label for="formGroupExampleInput">Reader Name: </label>
-        <input name="reader_name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Reader Name">
+        <input name="reader_name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Reader Name" requirev>
     </div>
 
     <div class="form-group">
         <label for="formGroupExampleInput">Id: </label>
-        <input name="reader_id" type="Number" class="form-control" id="formGroupExampleInput" placeholder="Enter Reader Numbert">
+        <input name="reader_id" type="Number" class="form-control" id="formGroupExampleInput" placeholder="Enter Reader Numbert" require>
     </div>
 
     <div class="form-group">
         <label for="formGroupExampleInput">Phone No: </label>
-        <input name="reader_phn" type="Number" class="form-control" id="formGroupExampleInput" placeholder="Enter Reader Id">
+        <input name="reader_phn" type="Number" class="form-control" id="formGroupExampleInput" placeholder="Enter Reader Id" require>
     </div>
 
     <div class="form-group">
         <label for="formGroupExampleInput">Emile: </label>
-        <input name="reader_email" type="email" class="form-control" id="formGroupExampleInput" placeholder="Enter Reader email">
+        <input name="reader_email" type="email" class="form-control" id="formGroupExampleInput" placeholder="Enter Reader email" require>
     </div>
 
     <div class="form-group">
         <label for="formGroupExampleInput">Address: </label>
-        <input name="reader_address" type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Reader Address">
+        <input name="reader_address" type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Reader Address" require>
     </div>
 
     <div class="form-group">
         <label for="gender">Gender: </label>
-        <select name="gender" id="gender">
+        <select name="gender" id="gender" require>
             <option selected disable>Select your Gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>

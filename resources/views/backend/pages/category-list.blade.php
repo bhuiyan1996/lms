@@ -3,7 +3,7 @@
 @section('backend_content')
 
 <div class="mx-5 my-5">
-<a href="{{route('category.create')}}" class="btn btn-primary">Create Category</a>
+<P><a href="{{route('category.create')}}" class="btn btn-primary">Create Category</a></P>
 </div>
 
 <div class="row mx-5 my-3">

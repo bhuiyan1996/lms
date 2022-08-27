@@ -34,16 +34,16 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
         <form action="{{route('store.book')}}" method="POST" enctype="multipart/form-data">
             @csrf
             <label for=""><h6>Book Name</h6></label>
-            <input type="text" class="form-control" name="book_name">
+            <input type="text" class="form-control" name="book_name" required>
             <label for=""><h6>Book Price </h6></label>
-            <input type="number" class="form-control" name="book_price">
+            <input type="number" class="form-control" name="book_price" required>
             <label for=""><h6>Book Quantity</h6></label>
-            <input type="number" class="form-control" name="book_qty"><br>
+            <input type="number" class="form-control" name="book_qty" required><br>
             <!-- <label for="">Book Desc</label>
-            <input type="text" class="form-control" name="book_desc"> -->
+            <input type="text" class="form-control" name="book_desc" required> -->
             <h6>Category</h6>
             <select class="form-select" aria-label="Default select example" name="category">
-                <option selected>Select Category</option>
+                <option selected required>Select Category</option>
                 @foreach($categories as $data)
                 <option value="{{$data->id}}">{{$data->name}}</option>
                 @endforeach
@@ -51,7 +51,7 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
             </select>
 
             <div class="form-group">
-        <label for=""><h6>Upload Image</h6></label>
+        <label for="" ><h6>Upload Image</h6></label>
         <input type="file" name="image" class="form-control" require>
             </div>
             <button type="submit" class="btn btn-success">Create</button>

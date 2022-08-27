@@ -43,10 +43,10 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
     @csrf
     <div class="form-group">
         <label for="formGroupExampleInput">Reader Id: </label>
-        <select class="form-select" aria-label="Default select example" id="bookname" name="reader_id">
-                <option selected>Select Reader Id</option>
+        <select class="form-select" aria-label="Default select example" id="bookname" name="reader_id" required>
+                <option selected >Select Reader Id</option>
                 @foreach($readers as $reader)
-                <option value="{{$reader->id}}">{{$reader->id}}</option>
+                <option required value="{{$reader->id}}">{{$reader->id}}</option>
                 @endforeach
             </select>
         <!-- <input name="reader_id" type="number" class="form-control" id="formGroupExampleInput" placeholder="Enter Reader Id"> -->
@@ -57,13 +57,13 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
         <select class="form-select" aria-label="Default select example" id="bookname" name="book_name">
                 <option selected>Select Book</option>
                 @foreach($books as $book)
-                <option value="{{$book->id}}">{{$book->name}}</option>
+                <option required value="{{$book->id}}">{{$book->name}}</option>
                 @endforeach
             </select>
     </div>
 
     <div class="form-group">
-        <label for="formGroupExampleInput">Retune Date: </label>
+        <label for="formGroupExampleInput" required>Retune Date: </label>
         <input name="date" type="date" class="form-control" id="formGroupExampleInput" placeholder="Enter Return Date">
     </div>
 

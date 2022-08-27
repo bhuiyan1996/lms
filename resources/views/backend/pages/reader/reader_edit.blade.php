@@ -7,22 +7,22 @@
     @csrf
     <div class="form-group">
         <label for="formGroupExampleInput">Reader Name: </label>
-        <input name="reader_name" type="text" class="form-control" value="{{$reader->name}}">
+        <input name="reader_name" type="text" class="form-control" value="{{$reader->name}}" require>
     </div>
 
     <div class="form-group">
         <label for="formGroupExampleInput">Phone No: </label>
-        <input name="reader_phn" type="Number" class="form-control" value="{{$reader->phone}}">
+        <input name="reader_phn" type="Number" class="form-control" value="{{$reader->phone}}" require>
     </div>
 
     <div class="form-group">
         <label for="formGroupExampleInput">Emile: </label>
-        <input name="reader_email" type="email" class="form-control" value="{{$reader->email}}">
+        <input name="reader_email" type="email" class="form-control" value="{{$reader->email}}" require>
     </div>
 
     <div class="form-group">
         <label for="formGroupExampleInput">Address: </label>
-        <input name="reader_address" type="text" class="form-control"value="{{$reader->address}}">
+        <input name="reader_address" type="text" class="form-control"value="{{$reader->address}}" require>
     </div>
 
    

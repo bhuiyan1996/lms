@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('reader_name')->nullable();
             $table->string('book')->nullable();
             $table->date('date');
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

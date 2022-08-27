@@ -36,12 +36,12 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
     @csrf
     <div class="form-group">
         <label for="formGroupExampleInput">Enter Name: </label>
-        <input name="category_name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Category Name">
+        <input name="category_name" type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter Category Name" required>
     </div>
 
     <div class="form-group">
         <label for="formGroupExampleInput2">Enter Description</label>
-        <textarea class="form-control" name="description" id="" placeholder="Enter Description"></textarea>
+        <textarea class="form-control" name="description" id="" placeholder="Enter Description" required></textarea>
     </div>
 
     <!-- <div class="form-group">

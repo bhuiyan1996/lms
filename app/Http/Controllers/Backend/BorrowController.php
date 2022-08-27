@@ -49,7 +49,7 @@ class BorrowController extends Controller
            
         }
         else{
-              return redirect()->back()->with('message', 'reader already take a book');
+              return redirect()->back()->with('message', 'Reader already take a book');
                }
         
     }
@@ -63,7 +63,9 @@ class BorrowController extends Controller
        $reader->update([
         'status'=>'Inactive'
     ]);
-        $borrow->delete();
+        $borrow->update([
+            'status'=>'return done'
+        ]);
         return redirect()->back();
     }
     public function search(Request $request){
@@ -73,5 +75,9 @@ class BorrowController extends Controller
         $borrows=Borrow::where('date','like','%'.$request->date.'%')->get();
         // dd($request->date);
          return view('backend.pages.borrow.search',compact('borrows'));
+    }
+    public function borrowReport(){
+        $borrows= Borrow::all();
+        return view('backend.pages.borrow.borrow_report',compact('borrows'));
     }
 }

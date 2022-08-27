@@ -69,6 +69,12 @@ class ReaderController extends Controller
         return redirect()->route('reader.list');
         }
 
+
+
+        public function readerReport(){
+            $readers= Reader::all();
+            return view('backend.pages.reader_report',compact('readers'));
+        }
      }
 
 

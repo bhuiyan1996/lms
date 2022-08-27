@@ -6,11 +6,11 @@
             @csrf
             
             <label for="">Book Name</label>
-            <input type="text" class="form-control" name="name" value="{{$book->name}}">
+            <input type="text" class="form-control" name="name" value="{{$book->name}}" required>
             <label for="">Book Price</label>
-            <input type="number" class="form-control" name="book_price" value="{{$book->price}}">
+            <input type="number" class="form-control" name="book_price" value="{{$book->price}}" required>
             <label for="">Book Qty</label>
-            <input type="number" class="form-control" name="book_qt"  value="">
+            <input type="number" class="form-control" name="book_qt"  value="" required>
             <!-- <label for="">Available</label> -->
             <!-- <input type="number" class="form-control" name="book_qty"  value=""> -->
 

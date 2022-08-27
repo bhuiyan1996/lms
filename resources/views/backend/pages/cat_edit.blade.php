@@ -36,12 +36,12 @@ background: linear-gradient(to right, rgba(106, 17, 203, 1), rgba(37, 117, 252, 
     @csrf
     <div class="form-group">
         <label for="formGroupExampleInput">Enter Name: </label>
-        <input name="category_name" type="text" class="form-control"  value="{{$cat->name}}">
+        <input name="category_name" type="text" class="form-control"  value="{{$cat->name}}" required>
     </div>
 
     <div class="form-group">
         <label for="formGroupExampleInput2">Enter Description</label>
-        <input name="description" type="text"  class="form-control"  value="{{$cat->description}}"> </input>
+        <input name="description" type="text"  class="form-control"  value="{{$cat->description}}" required> </input>
     </div>
 
 

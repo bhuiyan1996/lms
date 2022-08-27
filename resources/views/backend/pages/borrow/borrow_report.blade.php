@@ -37,7 +37,6 @@
               <th scope="col">Reader Name</th>
               <th scope="col">Book Name</th>
               <th scope="col">Return Date</th>
-              <th scope="col">Action</th>
           </tr>
       </thead>
       <tbody>
@@ -48,15 +47,7 @@
               <td>{{optional($data->getreader)->name}}</td>
               <td>{{optional($data->getBook)->name}}</td>
               <td>{{$data->date}}</td>
-              @if($data->status == null)
-              <td>
-                 
-                  <a class="btn btn-danger" href="{{route('delete.borrow',$data->id)}}">Return</a>
-               
-              </td>
-              @else
-                  <td>{{$data->status}}</td>
-                   @endif 
+             
           </tr>
           @endforeach
       </tbody>

@@ -6,8 +6,11 @@
 
   <table class="mx-5">
       <br>
-      <th> <a href="{{route('form.borrow')}}" class="btn btn-primary">Borrow Form</a> </th>
-      <th><pre>                                                                                                     </pre></th>
+      <th> <a href="{{route('form.borrow')}}" class="btn btn-primary">Borrow Form</a> 
+    </th>
+      <th><pre>                                                                                                     
+        
+      </pre></th>
       <th>
           <div class="hero__search__form">
               <form action="{{route('search')}}" method="get">
@@ -45,11 +48,15 @@
               <td>{{optional($data->getreader)->name}}</td>
               <td>{{optional($data->getBook)->name}}</td>
               <td>{{$data->date}}</td>
-
+              @if($data->status == null)
               <td>
-                  <a class="btn btn-danger" href="{{route('delete.borrow',$data->id)}}">Delete</a>
-
+                 
+                  <a class="btn btn-danger" href="{{route('delete.borrow',$data->id)}}">Return</a>
+               
               </td>
+              @else
+                  <td>{{$data->status}}</td>
+                   @endif 
           </tr>
           @endforeach
       </tbody>

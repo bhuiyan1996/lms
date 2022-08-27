@@ -79,6 +79,8 @@ Route::get('/reader/view/{id}',[ReaderController::class,'views'])->name('view.re
 Route::get('/reader/delete/{id}',[ReaderController::class,'delete'])->name('delete.reader');
 Route::get('/reader/edit/{id}',[ReaderController::class,'edit'])->name('edit.reader');
 Route::post('/reader/update/{id}',[ReaderController::class,'update'])->name('update.reader');
+//reader report
+Route::get('/reader/report',[ReaderController::class,'readerReport'])->name('reader.report');
 
 //  borrow operation
 Route::get('/borrow',[BorrowController::class,'list'])->name('borrow.list');
@@ -86,6 +88,10 @@ Route::get('/borrow/form',[BorrowController::class,'form'])->name('form.borrow')
 Route::post('/borrow/store',[BorrowController::class,'store'])->name('store.borrow');
 Route::get('/borrow/delete/{id}',[BorrowController::class,'delete'])->name('delete.borrow');
 Route::get('/search',[BorrowController::class,'search'])->name('search');
+Route::get('/borrow/report',[BorrowController::class,'borrowReport'])->name('borrow.report');
+
+// reader 
+
 
 });
 

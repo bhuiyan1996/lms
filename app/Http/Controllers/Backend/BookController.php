@@ -94,11 +94,12 @@ class BookController extends Controller
         // dd($request->name);
          return view('backend.pages.book.book_search',compact('books'));
 
-
-
     }
 
-
+    public function bookReport(){
+        $books=Book::paginate(10);
+        return view('backend.pages.book.book_report',compact('books'));
+    }
 
 
 }

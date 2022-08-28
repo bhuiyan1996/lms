@@ -70,6 +70,8 @@ Route::get('/book/delete/{id}',[BookController::class,'delete'])->name('delete.b
 Route::get('/book/edit/{id}',[BookController::class,'edit'])->name('book.edit');
 Route::post('/book/update/{id}',[BookController::class,'update'])->name('book.update');
 Route::get('/book_search',[BookController::class,'search'])->name('search.book');
+Route::get('/book/report',[BookController::class,'bookReport'])->name('book.report');
+
 
 //  reader operation
 Route::get('/readers',[ReaderController::class,'list'])->name('reader.list');

@@ -63,8 +63,10 @@
 <div class="dropdown">
   <button class="dropbtn">Report</button>
   <div class="dropdown-content">
+    <a href="{{route('book.report')}}">Book Report</a>
     <a href="{{route('reader.report')}}">Reader Report</a>
     <a href="{{route('borrow.report')}}">Borrow Report</a>
+    
 
   </div>
 </div>

@@ -81,3 +81,4 @@ class BorrowController extends Controller
         return view('backend.pages.borrow.borrow_report',compact('borrows'));
     }
 }
+    
